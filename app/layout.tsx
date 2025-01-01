@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const Metadata = {
+export const metadata = {
   title: 'Course Dashboard',
   description: 'A dashboard for managing courses',
 };
