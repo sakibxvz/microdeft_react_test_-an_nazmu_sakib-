@@ -1,11 +1,16 @@
 'use client'
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './Home.module.css';
 import Button from '@/components/ui/button/Button';
 
 const HomePage: React.FC = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
 
-  const isAuthenticated = Boolean(localStorage.getItem('authToken'));
+  useEffect(() => {
+    const authToken = localStorage.getItem('authToken');
+    setIsAuthenticated(!!authToken);
+  }, []);
+
   return (
     <div className={styles.container}>
       <nav className={styles.nav}>
@@ -26,7 +31,6 @@ const HomePage: React.FC = () => {
             </>
           )}
         </div>
-
       </nav>
 
       <main className={styles.main}>
@@ -66,4 +70,3 @@ const HomePage: React.FC = () => {
 };
 
 export default HomePage;
-
