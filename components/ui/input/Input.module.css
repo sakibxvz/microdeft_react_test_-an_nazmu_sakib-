@@ -1,0 +1,39 @@
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #18181b;
+  padding-top: 1rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.625rem;
+  font-size: 0.875rem;
+  border: 1px solid #e4e4e7;
+  border-radius: 0.5rem;
+  background-color: white;
+  transition: all 0.2s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #18181b;
+  box-shadow: 0 0 0 2px rgba(24, 24, 27, 0.1);
+}
+
+.input::placeholder {
+  color: #a1a1aa;
+}
+
+.input:disabled {
+  background-color: #f4f4f5;
+  cursor: not-allowed;
+}
+
