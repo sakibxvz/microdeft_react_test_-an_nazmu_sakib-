@@ -9,7 +9,7 @@ const HomePage: React.FC = () => {
   return (
     <div className={styles.container}>
       <nav className={styles.nav}>
-        <div className={styles.logo}>LearnPro</div>
+        <div className={styles.logo}>Microdeft</div>
         <div className={styles.navButtons}>
           {isAuthenticated ? (
             <Button variant="primary" className={styles.loginButton}>

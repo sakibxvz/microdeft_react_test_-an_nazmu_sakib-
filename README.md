@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+My Next.js 15 + TypeScript Project
+----------------------------------
 
-## Getting Started
+This is a Next.js 15 project bootstrapped with TypeScript. It includes form validation using **React Hook Form** and **Zod** schema.
 
-First, run the development server:
+Features
+--------
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+*   **Next.js 15 + TypeScript** for server-side rendering and static site generation.
+    
+*   **Raw CSS** for styling without any CSS-in-JS libraries.
+    
+*   **React Hook Form** for easy form handling and validation.
+    
+*   **Zod** schema for form validation.
+    
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Live Url:
+---------
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Getting Started
+---------------
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 1\. Clone the repository:
 
-## Learn More
+Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   git clone[https://github.com/sakibxvz/microdeft_react_test_-an_nazmu_sakib-](https://github.com/sakibxvz/microdeft_react_test_-an_nazmu_sakib-)  cd [microdeft_react_test_-an_nazmu_sakib-](https://github.com/sakibxvz/microdeft_react_test_-an_nazmu_sakib-)   `
 
-To learn more about Next.js, take a look at the following resources:
+### 2\. Install dependencies:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   npm run dev  # or  yarn dev  # or  pnpm dev  # or  bun dev   `
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 3\. Run the development server:
 
-## Deploy on Vercel
+Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   bashCopy codenpm run dev  # or  yarn dev  # or  pnpm dev   `
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 4\. Open your browser:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Navigate to [http://localhost:3000](http://localhost:3000) to see the app in action.
+
+Folder Structure
+----------------
+
+Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   bashCopy code/app    /components  # React components    /pages      # Next.js pages    /public     # Public assets like images    /styles     # Raw CSS files    /utils      # Helper functions  /schema       # Zod schemas for form validation   `
+
+Form Handling & Validation
+--------------------------
+
+This project uses **React Hook Form** for handling form data and **Zod** for validation.
+
+*   **React Hook Form** simplifies form creation, validation, and submission.
+    
+*   **Zod** schemas are used to validate form data, ensuring proper format and constraints.
+    
+
+### Example Usage:
+
+Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   tsxCopy codeimport { useForm } from 'react-hook-form';  import { zodResolver } from '@hookform/resolvers/zod';  import { MyFormSchema } from '@/schema';  import Input from '@/components/ui/input/Input';  const MyFormComponent = () => {    const { register, handleSubmit, formState: { errors } } = useForm({      resolver: zodResolver(MyFormSchema),    });    const onSubmit = (data: FormInputs) => {      console.log('Form Data:', data);    };    return (                {errors.name &&   {errors.name.message}  }        Submit    );  };   `
+
+Styling
+-------
+
+This project uses **raw CSS** for styling, with separate CSS files for components and pages. You can modify the styles in the /styles directory to customize the look of the application.
+
+Learn More
+----------
+
+To learn more about Next.js, TypeScript, and the libraries used, check out the following resources:
+
+*   [Next.js Documentation](https://nextjs.org/docs)
+    
+*   TypeScript Documentation
+    
+*   [React Hook Form Documentation](https://react-hook-form.com/)
+    
+*   [Zod Documentation](https://zod.dev/)
+    
+
+Deploy on Vercel
+----------------
+
+Deploy your Next.js app with Vercel:
+
+1.  Push your code to a GitHub repository.
+    
+2.  Visit [Vercel](https://vercel.com/) and create a new project.
+    
+3.  Select your GitHub repository and follow the deployment steps.
+    
+
+Your app will be automatically deployed, and you can access it via a Vercel-provided URL.
