@@ -23,24 +23,23 @@ Getting Started
 
 ### 1\. Clone the repository:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   git clone[https://github.com/sakibxvz/microdeft_react_test_-an_nazmu_sakib-](https://github.com/sakibxvz/microdeft_react_test_-an_nazmu_sakib-)  cd [microdeft_react_test_-an_nazmu_sakib-](https://github.com/sakibxvz/microdeft_react_test_-an_nazmu_sakib-)   `
+``` git clone https://github.com/sakibxvz/microdeft_react_test_-an_nazmu_sakib-
+cd microdeft_react_test_-an_nazmu_sakib-
+```
 
 ### 2\. Install dependencies:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   npm run dev  # or  yarn dev  # or  pnpm dev  # or  bun dev   `
+`   npm run dev  # or  yarn dev  # or  pnpm dev  # or  bun dev   `
 
 ### 3\. Run the development server:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   bashCopy codenpm run dev  # or  yarn dev  # or  pnpm dev   `
+`   bashCopy codenpm run dev  # or  yarn dev  # or  pnpm dev   `
 
 ### 4\. Open your browser:
 
 Navigate to [http://localhost:3000](http://localhost:3000) to see the app in action.
 
-Folder Structure
-----------------
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   bashCopy code/app    /components  # React components    /pages      # Next.js pages    /public     # Public assets like images    /styles     # Raw CSS files    /utils      # Helper functions  /schema       # Zod schemas for form validation   `
 
 Form Handling & Validation
 --------------------------
@@ -52,9 +51,6 @@ This project uses **React Hook Form** for handling form data and **Zod** for val
 *   **Zod** schemas are used to validate form data, ensuring proper format and constraints.
     
 
-### Example Usage:
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   tsxCopy codeimport { useForm } from 'react-hook-form';  import { zodResolver } from '@hookform/resolvers/zod';  import { MyFormSchema } from '@/schema';  import Input from '@/components/ui/input/Input';  const MyFormComponent = () => {    const { register, handleSubmit, formState: { errors } } = useForm({      resolver: zodResolver(MyFormSchema),    });    const onSubmit = (data: FormInputs) => {      console.log('Form Data:', data);    };    return (                {errors.name &&   {errors.name.message}  }        Submit    );  };   `
 
 Styling
 -------
